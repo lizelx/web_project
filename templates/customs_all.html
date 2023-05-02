@@ -1,0 +1,30 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Список пользователей
+{% endblock %}
+
+{% block page-lead %}
+
+{% endblock %}
+
+{% block content %}
+<a href="/" class="btn btn-outline-secondary btn-lg px-4">← Назад</a>
+
+<div class="container-sm px-5 py-5" id="term-form">
+<div class="d-flex flex-column flex-md-row p-1 gap-5 py-md-1 align-items-center justify-content-center">
+  {% for name, name2, country in users_info %}
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action d-flex gap-1 py-2" >
+      <img src="/static/people.png" alt="twbs" class="rounded-circle flex-shrink-0" width="32" height="32">
+      <div class="d-flex gap-5 w-100 justify-content-between">
+        <div>
+          <h4 class="mb-1">{{ name }}  {{ name2 }}</h4>
+        </div>
+        <small class="opacity-50 text-nowrap">{{ country }}</small>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+  </div>
+{% endblock %}

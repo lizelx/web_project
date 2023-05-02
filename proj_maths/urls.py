@@ -19,8 +19,13 @@ from . import views
 
 urlpatterns = [
     path('', views.index),
+    path('customs', views.customs),
+    path('customs/customs-all', views.customs_all),
     path('terms-list', views.terms_list),
+    path('terms-list-sort', views.terms_list_sort),
+    path('terms-list-random', views.db_get_word),
     path('add-term', views.add_term),
     path('send-term', views.send_term),
+    path('customs/customs-request', views.customs_request),
     path('stats', views.show_stats)
 ]

@@ -1,0 +1,141 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Регистрация
+{% endblock %}
+
+{% block page-lead %}
+
+{% endblock %}
+
+{% block content %}
+<a href="/" class="btn btn-outline-secondary btn-lg px-4">← Назад</a>
+<div class="col-md-7 col-lg-8" id=term-form">
+        <form  method="post">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Имя</label>
+              <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Фамилия</label>
+              <input type="text" class="form-control" name="lastName" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Имя пользователя</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username" required="">
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Город</label>
+              <select class="form-select" name="country" id="country" required="">
+                <option value="">Выберите город...</option>
+<option> Архангельск </option>
+<option> Астрахань </option>
+<option> Балашиха </option>
+<option> Барнаул </option>
+<option> Белгород </option>
+<option> Брянск </option>
+<option> Владивосток </option>
+<option> Владикавказ </option>
+<option> Владимир </option>
+<option> Волгоград </option>
+<option> Волжский </option>
+<option> Вологда </option>
+<option> Воронеж </option>
+<option> Грозный </option>
+<option> Екатеринбург </option>
+<option> Иваново </option>
+<option> Ижевск </option>
+<option> Иркутск </option>
+<option> Йошкар-Ола </option>
+<option> Казань </option>
+<option> Калининград </option>
+<option> Калуга </option>
+<option> Кемерово </option>
+<option> Киров </option>
+<option> Кострома </option>
+<option> Краснодар </option>
+<option> Красноярск </option>
+<option> Крым </option>
+<option> Курган </option>
+<option> Курск </option>
+<option> Липецк </option>
+<option> Магнитогорск </option>
+<option> Махачкала </option>
+<option> Москва </option>
+<option> Мурманск </option>
+<option> Набережные Челны </option>
+<option> Нижневартовск </option>
+<option> Нижний Новгород </option>
+<option> Нижний Тагил </option>
+<option> Новокузнецк </option>
+<option> Новороссийск </option>
+<option> Новосибирск </option>
+<option> Омск </option>
+<option> Орёл </option>
+<option> Оренбург </option>
+<option> Пенза </option>
+<option> Пермь </option>
+<option> Подольск </option>
+<option> Ростов-на-Дону </option>
+<option> Рязань </option>
+<option> Самара </option>
+<option> Санкт-Петербург </option>
+<option> Саранск </option>
+<option> Саратов </option>
+<option> Севастополь </option>
+<option> Симферополь </option>
+<option> Смоленск </option>
+<option> Сочи </option>
+<option> Ставрополь </option>
+<option> Стерлитамак </option>
+<option> Сургут </option>
+<option> Тамбов </option>
+<option> Тверь </option>
+<option> Тольятти </option>
+<option> Томск </option>
+<option> Тула </option>
+<option> Тюмень </option>
+<option> Улан-Удэ </option>
+<option> Ульяновск </option>
+<option> Уфа </option>
+<option> Хабаровск </option>
+<option> Чебоксары </option>
+<option> Челябинск </option>
+<option> Череповец </option>
+<option> Чита </option>
+<option> Якутск </option>
+<option> Ярославль </option>
+                <option>Другое</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div> </div>
+          <hr class="my-4">
+<button type="submit" class="w-100 btn btn-primary btn-lg" formaction="/customs/customs-request">Отправить</button>
+</form>
+{% endblock %}

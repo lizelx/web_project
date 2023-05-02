@@ -1,0 +1,35 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Карточки
+{% endblock %}
+
+{% block page-lead %}
+{{ slug }}
+{% endblock %}
+
+{% block content %}
+<a href="/" class="btn btn-outline-secondary btn-lg px-4">← Назад</a>
+
+
+<div class="modal modal-sheet position-static d-block bg-body-secondary p-1 " tabindex="-1" role="dialog" id="modalTour">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-2 shadow">
+      <div class="modal-body p-2">
+        <h2 class="fw-bold mb-0">{{ term1.1 }}</h2>
+        <ul class="d-grid gap-2 my-2 list-unstyled small">
+          <li class="d-flex gap-4">
+            <svg class="bi text-body-secondary flex-shrink-0" width="4" height="4"><use xlink:href="#grid-fill"></use></svg>
+            <div>
+              <div>
+              <h5 class="mb-0">{{ term1.2 }}</h5>
+            </div>
+            </div>
+        </ul>
+        <a href="/terms-list-random" class="btn btn-outline-secondary mt-5 w-100">Следующее слово</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

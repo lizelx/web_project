@@ -7,26 +7,50 @@
     {% load static %}
     <!-- CSS -->
     <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/flagg.ico" type="image/x-icon" sizes="280x280">
 </head>
 <body>
 <main>
     <div class="container">
-        <header class="border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <div class="fs-2 mb-3">
-                    <img src="{% static 'calculator.svg' %}" alt="Проект про математику" width="32" height="32"/>
-                    <span>Проект про математику</span>
+
+        <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <div class="fs-3 mb-1">
+                    <img src="{% static 'self-study.png' %}" alt="Проект про изучение английских слов по карточкам" width="80" height="70"/>
+                    <span>Проект про изучение английских слов по карточкам</span>
                 </div>
             </a>
-        </header>
-        <div class="p-5 mb-4 bg-light rounded-3" id="title-box">
-            <div class="container-fluid py-5">
+          <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/customs" class="nav-link active fs-5" aria-current="page">Регистрация</a></li>
+        <li class="nav-item"><a href="/customs/customs-all" class="nav-link fs-5">Пользователи</a></li>
+      </ul>
+          <div class="fs-6 mb-2">
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/static/IMG_6122.jpg" alt="mdo" class="rounded-circle" width="42" height="42">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+        <div class="p-1 mb-5 bg-light rounded-6" id="title-box">
+            <div class="container-fluid py-1">
                 <h1 class="display-1 fw-bold">{% block page-title %}{% endblock %}</h1>
-                <p class="col-md-8 fs-4">{% block page-lead %}{% endblock %}</p>
+                <p class="col-md-12 fs-4">{% block page-lead %}{% endblock %}</p>
             </div>
         </div>
         {% block content %}{% endblock %}
-        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023</footer>
+        <footer class="footer pt-3 mt-4 text-muted border-top">© Автор проекта Сарыгина Е.В. 2023</footer>
     </div>
 </main>
 </body>
